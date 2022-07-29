@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+/* eslint-disable jsx-a11y/iframe-has-title */
+import './App.css'
+import NavBar from './ui-components/NavBar'
+import { withAuthenticator } from '@aws-amplify/ui-react'
 
-function App() {
+function App({ user, signOut }) {
+  const navbarOverrrides = {
+    image: {
+      src: user?.attributes.profile,
+    },
+    Logo29767075: {
+      children: 'IPSENSE',
+    },
+    Button: {
+      onClick: signOut,
+    },
+  }
+  console.log({ user })
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className='App'>
+      <NavBar overrides={navbarOverrrides} width='100%' />
+      <header className='App-header'>
+        <div id='embeddingContainer'></div>
+        <p>Nome : {user.attributes.name}</p>
+        <p>Email : {user.attributes.email}</p>
+        <p>Username : {user.username}</p>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default withAuthenticator(App)

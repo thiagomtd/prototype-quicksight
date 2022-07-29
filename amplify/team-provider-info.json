@@ -1,0 +1,15 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-prototypequicksight-staging-150236-authRole",
+      "UnauthRoleArn": "arn:aws:iam::716492043161:role/amplify-prototypequicksight-staging-150236-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::716492043161:role/amplify-prototypequicksight-staging-150236-authRole",
+      "Region": "sa-east-1",
+      "DeploymentBucketName": "amplify-prototypequicksight-staging-150236-deployment",
+      "UnauthRoleName": "amplify-prototypequicksight-staging-150236-unauthRole",
+      "StackName": "amplify-prototypequicksight-staging-150236",
+      "StackId": "arn:aws:cloudformation:sa-east-1:716492043161:stack/amplify-prototypequicksight-staging-150236/fc751070-0cf3-11ed-beb6-0233597971fe",
+      "AmplifyAppId": "dypnfac0aoudw"
+    }
+  }
+}
