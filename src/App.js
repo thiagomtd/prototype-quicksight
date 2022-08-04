@@ -25,7 +25,7 @@ function App({ user, signOut }) {
   useEffect(() => {
     axios({
       method: 'GET',
-      url: `https://vw920578c0.execute-api.us-east-1.amazonaws.com/dev/dashboard/quicksight-url?userId=${user.username}&userName=${user.attributes.name}&userGroup=financeiro`,
+      url: `https://vw920578c0.execute-api.us-east-1.amazonaws.com/dev/dashboard?userId=${user.username}&userName=${user.attributes.name}&userGroup=financeiro`,
     }).then((response) => {
       console.log(response.data.EmbedUrl)
       setDashboardURL(response.data.EmbedUrl)
