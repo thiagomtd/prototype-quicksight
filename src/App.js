@@ -27,8 +27,8 @@ function App({ user, signOut }) {
       method: 'GET',
       url: `https://vw920578c0.execute-api.us-east-1.amazonaws.com/dev/dashboard/quicksight-url?userId=${user.username}&userName=${user.attributes.name}&userGroup=financeiro`,
     }).then((response) => {
-      console.log(response.data.body.EmbedUrl)
-      setDashboardURL(response.data.body.EmbedUrl)
+      console.log(response.data.EmbedUrl)
+      setDashboardURL(response.data.EmbedUrl)
     })
   }, [])
 
